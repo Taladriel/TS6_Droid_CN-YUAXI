@@ -31,13 +31,13 @@ class SettingsStore(private val context: Context) {
         .map { it[KEY_AUTO_LOAD_IMAGES] ?: true }
 
     val language: Flow<String> = context.settingsDataStore.data
-        .map { it[KEY_LANGUAGE] ?: "zh" }
+        .map { it[KEY_LANGUAGE] ?: "ru" }
 
     val enableFloatingWindow: Flow<Boolean> = context.settingsDataStore.data
         .map { it[KEY_ENABLE_FLOATING_WINDOW] ?: true }
 
     val animeBackground: Flow<Boolean> = context.settingsDataStore.data
-        .map { it[KEY_ANIME_BACKGROUND] ?: true }
+        .map { it[KEY_ANIME_BACKGROUND] ?: false }
 
     suspend fun setAudioGain(gain: Float) {
         context.settingsDataStore.edit { it[KEY_AUDIO_GAIN] = gain }
