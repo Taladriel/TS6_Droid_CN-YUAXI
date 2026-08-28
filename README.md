@@ -1,12 +1,8 @@
-# TS6 Droid 简中版
-
-基于原作者 [flamme-demon/TS6_Droid](https://github.com/flamme-demon/TS6_Droid) 的开源项目进行汉化与功能增强的 Android 客户端。
-
-这是一个自由、轻量级的 TeamSpeak 3/6 安卓客户端，使用 Jetpack Compose 构建，底层由 Rust 编写的 `tslib` 驱动。
+This is a free, lightweight TeamSpeak 3/6 Android client, built with Jetpack Compose, driven at the底层 by a `tslib` written in Rust.
 
 ---
 
-## 项目演示
+## Project Demo
 
 <div align="center">
 <table>
@@ -23,166 +19,166 @@
 
 ---
 
-## 更新日志
+## Changelog
 
-### v2.1.4-Han（2026-08-18）
+### v2.1.4-Han (2026-08-18)
 
-**Bug 修复**
-- **昵称长度验证**：连接服务器时增加昵称最小长度检查，昵称至少需要 3 个字符（PR #4 from IMito-iron）
-- 提取 `getValidatedConnectionInput()` 方法统一处理连接前的输入验证
-- 新增错误提示：「昵称至少需要3个字符」（支持中/英/法三语）
+**Bug Fixes**
+- **Nickname length validation**: Added a minimum nickname length check when connecting to a server; the nickname must be at least 3 characters (PR #4 from IMito-iron)
+- Extracted a `getValidatedConnectionInput()` method to unify input validation before connecting
+- Added a new error message: "Nickname must be at least 3 characters" (supports Chinese/English/French)
 
-### v2.1.3-Han（2026-07-28）
+### v2.1.3-Han (2026-07-28)
 
-**新功能**
-- **TS3 Spacer 频道渲染**：解析 `[cspacer]`、`[lspacer]`、`[rspacer]`、`[*spacer]` 标签，频道列表正确显示分隔线和装饰文本（PR #3 from XuVIIJay）
+**New Features**
+- **TS3 Spacer channel rendering**: Parses `[cspacer]`, `[lspacer]`, `[rspacer]`, `[*spacer]` tags, and the channel list correctly displays separators and decorative text (PR #3 from XuVIIJay)
 
-### v2.1.2-Han（2026-07-15）
+### v2.1.2-Han (2026-07-15)
 
-**新功能**
-- **自定义背景**：支持从相册上传图片作为背景，支持裁切预览（双指缩放 + 单指拖动）
-- 裁切界面全屏预览，九宫格辅助线，四角拖动手柄
-- 设置页增加自定义背景管理（上传/删除）
-- 保存自定义背景后立即生效，无需重启
+**New Features**
+- **Custom background**: Supports uploading an image from the gallery as a background, with crop preview (two-finger zoom + one-finger drag)
+- Full-screen preview in the crop interface, rule-of-thirds grid lines, drag handles in four corners
+- Settings page adds custom background management (upload/delete)
+- Custom background takes effect immediately after saving, no restart required
 
-**UI 重构**
-- 设置页重新分组为卡片式布局：外观、音频、聊天、更多
-- 动漫背景开关下展开子区域（自定义背景 + 壁纸缓存）
-- 语言切换和关于软件归入「更多」分组
-- 版本号显示在设置页底部
-- 设置页卡片半透明，不遮挡动漫背景
+**UI Refactor**
+- Settings page regrouped into a card-style layout: Appearance, Audio, Chat, More
+- The anime background toggle expands a sub-area (custom background + wallpaper cache)
+- Language switching and About are placed in the "More" group
+- Version number is displayed at the bottom of the settings page
+- Settings page cards are semi-transparent and do not obscure the anime background
 
-**Bug 修复**
-- 修复裁切功能无法使用（裁切框只能移动不能缩放）
-- 修复保存自定义背景后需重启才生效的问题
+**Bug Fixes**
+- Fixed the crop feature being unusable (the crop box could only be moved but not resized)
+- Fixed the issue where a custom background only took effect after a restart
 
-### v2.1.0-Han（2026-06-27）
+### v2.1.0-Han (2026-06-27)
 
-**新功能**
-- **应用内更新**：点击更新检测后可直接在应用内下载并安装 APK，无需跳转浏览器
-- 下载进度条实时显示百分比，下载完成自动弹出系统安装界面
-- 新增「正在下载」状态，下载中不可关闭弹窗，失败显示错误信息
+**New Features**
+- **In-app update**: After tapping update check, the APK can be downloaded and installed directly in the app, no need to open a browser
+- Download progress bar shows the percentage in real time, and the system install screen automatically pops up when the download is complete
+- Added a "Downloading" state; the dialog cannot be closed during download, and an error message is shown on failure
 
-**Bug 修复**
-- 修复版本检测无法识别新版问题：比较版本号前先清除 `-Han` 后缀
-- 修复 API 请求失败时误判为「已是最新版本」，现在显示具体错误信息
-- 修复 Release 未上传 APK 时直接崩溃，现回退至 Releases 页面
+**Bug Fixes**
+- Fixed the issue where version detection could not recognize a new version: the `-Han` suffix is removed before comparing version numbers
+- Fixed the issue where an API request failure was mistakenly judged as "Already up to date"; now a specific error message is shown
+- Fixed a crash when a Release had no APK uploaded; now it falls back to the Releases page
 
-**编译签名**
-- 新增统一签名文件 `release.keystore`，debug 和 release 均使用同一签名
-- 多电脑协作只需复制 `release.keystore` 到项目根目录即可
+**Build Signing**
+- Added a unified signing file `release.keystore`; both debug and release builds use the same signature
+- For multi-computer collaboration, simply copy `release.keystore` to the project root directory
 
-### v2.1.0-Han（2026-06-27）
+### v2.1.0-Han (2026-06-27)
 
-**应用内更新**
-- 应用内 APK 下载与安装：更新弹窗内直接下载新版本 APK，显示实时进度条，下载完成后自动调起系统安装界面
-- 新增 FileProvider 支持，Android 8+ 设备正常安装应用内下载的 APK
-- 多电脑编译签名统一：使用项目内统一 `release.keystore` 签名文件，确保不同电脑编译的 APK 签名一致，可直接覆盖安装
-- 新增 `REQUEST_INSTALL_PACKAGES` 权限声明
+**In-app Update**
+- In-app APK download and installation: download the new version APK directly in the update dialog, show a real-time progress bar, and automatically invoke the system installer after download completes
+- Added FileProvider support, so Android 8+ devices can install APKs downloaded in the app normally
+- Unified build signing across multiple computers: use the unified `release.keystore` signing file in the project to ensure APKs built on different computers have the same signature and can be directly installed over the previous version
+- Added the `REQUEST_INSTALL_PACKAGES` permission declaration
 
-**功能修复**
-- 修复音量增益滑块调节后不生效的问题，新增 Flow 观察者实时同步到音频桥
-- 麦克风降噪实现验证：使用 Android 原生 NoiseSuppressor API，补全日志帮助排查设备兼容性
-- Logo 背景色从蓝色更换为粉色（#2962FF → #FF69B4）
-- 修复应用内版本检测无法检测到新版的问题：版本号比较前清除 `-Han` 后缀，API 失败时显示错误信息而非误判为「已是最新」
-- 修复 GitHub API 在国内网络环境下不可用时长显「已是最新」的问题
+**Fixes**
+- Fixed the issue where the volume gain slider adjustment did not take effect; added a Flow observer to sync to the audio bridge in real time
+- Microphone noise suppression implementation verification: uses Android's native NoiseSuppressor API and adds logging to help troubleshoot device compatibility
+- Changed the logo background color from blue to pink (#2962FF → #FF69B4)
+- Fixed the issue where in-app version detection could not detect a new version: the `-Han` suffix is removed before version comparison, and an error message is shown on API failure instead of incorrectly showing "Already up to date"
+- Fixed the issue where the GitHub API being unavailable in mainland China network conditions caused "Already up to date" to be shown persistently
 
-**新功能**
-- 应用内版本检测：设置页点击版本号可查询 GitHub 最新 Release 并弹窗更新
-- 网络错误时显示具体错误信息，无更新时提示「已是最新版本」
-- Release 未上传 APK 时自动回退跳转至 GitHub Releases 页面
+**New Features**
+- In-app version detection: tapping the version number on the settings page queries the latest GitHub Release and shows an update dialog
+- Shows a specific error message on network errors, and shows "Already up to date" when there is no update
+- Automatically falls back to the GitHub Releases page when a Release has no APK uploaded
 
-### v2.0.5-Han（2026-06-27）
+### v2.0.5-Han (2026-06-27)
 
-**功能修复**
-- 修复音量增益滑块调节后不生效的问题，新增 Flow 观察者实时同步到音频桥
-- 麦克风降噪实现验证：使用 Android 原生 NoiseSuppressor API，补全日志帮助排查设备兼容性
-- Logo 背景色从蓝色更换为粉色（#2962FF → #FF69B4）
-- 修复应用内版本检测无法检测到新版的问题：版本号比较前清除 `-Han` 后缀，API 失败时显示错误信息而非误判为「已是最新」
-- 修复 GitHub API 在国内网络环境下不可用时长显「已是最新」的问题
+**Fixes**
+- Fixed the issue where the volume gain slider adjustment did not take effect; added a Flow observer to sync to the audio bridge in real time
+- Microphone noise suppression implementation verification: uses Android's native NoiseSuppressor API and adds logging to help troubleshoot device compatibility
+- Changed the logo background color from blue to pink (#2962FF → #FF69B4)
+- Fixed the issue where in-app version detection could not detect a new version: the `-Han` suffix is removed before version comparison, and an error message is shown on API failure instead of incorrectly showing "Already up to date"
+- Fixed the issue where the GitHub API being unavailable in mainland China network conditions caused "Already up to date" to be shown persistently
 
-**新功能**
-- 应用内版本检测：设置页点击版本号可查询 GitHub 最新 Release 并弹窗更新
-- 网络错误时显示具体错误信息，无更新时提示「已是最新版本」
-- Release 未上传 APK 时自动回退跳转至 GitHub Releases 页面
+**New Features**
+- In-app version detection: tapping the version number on the settings page queries the latest GitHub Release and shows an update dialog
+- Shows a specific error message on network errors, and shows "Already up to date" when there is no update
+- Automatically falls back to the GitHub Releases page when a Release has no APK uploaded
 
-### v2.0.1-Han（2026-06-26）
+### v2.0.1-Han (2026-06-26)
 
-**Compose 性能优化**
-- 全项目 54 处 Flow 采集从 `collectAsState` 迁移至 `collectAsStateWithLifecycle`，应用切后台时自动暂停 UI 采集，降低 CPU 占用和电量消耗
-- 背景图片淡入动画从 `Modifier.alpha()` 迁移至 `Modifier.graphicsLayer {}`，动画帧跳过 Composition 阶段重组，减少掉帧
-- 缓存壁纸网格添加稳定 `key`，避免增删壁纸时滚动位置跳回
+**Compose Performance Optimization**
+- Migrated 54 Flow collections across the project from `collectAsState` to `collectAsStateWithLifecycle`, automatically pausing UI collection when the app goes to the background, reducing CPU usage and battery consumption
+- Migrated the background image fade-in animation from `Modifier.alpha()` to `Modifier.graphicsLayer {}`, so animation frames skip the Composition phase and reduce frame drops
+- Added stable `key`s to the cached wallpaper grid to prevent the scroll position from jumping back when adding or deleting wallpapers
 
-**Bug 修复**
-- 修复查看壁纸缓存无反应，点击后弹出缩略图网格弹窗
-- 清空壁纸缓存添加二次确认弹窗
-- 设置页音量增益滑块可正常调节
-- 设置页开关切换页面时不再跳动闪烁
-- 文件管理器点击图片文件支持应用内全屏预览
+**Bug Fixes**
+- Fixed the issue where viewing the wallpaper cache did nothing; tapping now opens a thumbnail grid dialog
+- Added a confirmation dialog before clearing the wallpaper cache
+- The volume gain slider on the settings page can now be adjusted normally
+- Settings page switches no longer jump or flicker when switching pages
+- The file manager now supports in-app full-screen preview when tapping an image file
 
-### v2.0.0-Han（2026-06-26）
+### v2.0.0-Han (2026-06-26)
 
-**Material3 UI 全面重构**
-- 采用 Google Material Design 3 规范，完全重构配色、排版与组件样式
-- Dynamic Color 动态取色（Android 12+），主题色从壁纸图片自动提取并生成完整配色方案
-- 15 级排版体系，Shape 圆角 token 对齐 M3 标准
-- 所有组件（按钮、输入框、卡片、弹窗、底部栏）统一 M3 风格
+**Material3 UI Comprehensive Refactor**
+- Adopted Google Material Design 3 specifications and completely refactored colors, typography, and component styles
+- Dynamic Color (Android 12+), with theme colors automatically extracted from the wallpaper image to generate a complete color scheme
+- 15-level typography system, Shape corner radius tokens aligned with M3 standards
+- All components (buttons, input fields, cards, dialogs, bottom bar) unified in M3 style
 
-**启动页与主题自适应**
-- 新增 SplashScreen 启动界面，加载期间显示品牌标识
-- 壁纸图片下载后自动提取主色调，主题配色实时适配
-- 3 秒超时保护：网络异常时从缓存随机抽取壁纸作为背景
+**Splash Screen and Theme Adaptation**
+- Added a SplashScreen launch screen that displays the brand logo during loading
+- After the wallpaper image is downloaded, the dominant color is automatically extracted and the theme colors adapt in real time
+- 3-second timeout protection: when the network is abnormal, a wallpaper is randomly selected from the cache as the background
 
-**底部导航栏 + 设置页**
-- 首页新增底部导航栏（主页 + 设置），支持页面切换
-- 语言切换、自动重连、音量增益、悬浮窗、动漫背景、麦克风降噪、关于软件全部整合到设置页
-- 服务端不再显示设置弹窗，界面更简洁
+**Bottom Navigation Bar + Settings Page**
+- Added a bottom navigation bar to the home page (Home + Settings) with page switching support
+- Language switching, auto-reconnect, volume gain, floating window, anime background, microphone noise suppression, and About are all integrated into the settings page
+- The server no longer shows a settings dialog, making the interface cleaner
 
-**壁纸缓存系统**
-- 壁纸图片自动缓存到本地，启动时优先使用缓存
-- 可设置缓存最大容量（10MB - 500MB 滑块调节）
-- 查看缓存壁纸缩略图网格，支持单张删除
-- 清空缓存带二次确认弹窗
-- 以上设置仅在「我是二刺螈」开启时可用
+**Wallpaper Cache System**
+- Wallpaper images are automatically cached locally and the cache is used first at startup
+- Configurable maximum cache capacity (10MB - 500MB slider adjustment)
+- View a grid of cached wallpaper thumbnails, with support for deleting a single image
+- Clearing the cache has a confirmation dialog
+- The above settings are only available when "I'm an otaku" is enabled
 
-**动画背景优化**
-- 壁纸切换不再闪烁：缓存机制 + 600ms 淡入动画
-- 切页不再触发重新获取，全局共享同一张壁纸
-- 首页空列表居中显示「暂无连接」
+**Animated Background Optimization**
+- Wallpaper switching no longer flickers: cache mechanism + 600ms fade-in animation
+- Switching pages no longer triggers re-fetching; the same wallpaper is shared globally
+- Empty home page list is centered with "No connections"
 
-**文件管理器图片预览**
-- 点击图片文件直接在应用内全屏预览，不再弹出外部打开方式
+**File Manager Image Preview**
+- Tapping an image file now opens a full-screen preview in the app instead of showing an external open dialog
 
-**Bug 修复**
-- 修复 Config#HARDWARE bitmap 无法 getPixel 导致闪退
-- 修复设置页开关在页面切换时跳动闪烁
-- 修复 SettingsDialog 残留代码导致编译错误
-- 修复窗口背景色导致的灰色底色问题
-- 统一所有组件使用 M3 颜色 token
-
----
-
-## 汉化及增强特性
-
-1. **简体中文本地化**：100% 补齐全文本简体中文翻译（`zh-rCN`）。
-2. **语言切换**：支持中文、English、Français 一键切换，无需更改手机系统语言。
-3. **内置核心语音驱动**：直接内置全架构核心二进制库（jniLibs），开箱即用。
-4. **CI/CD 深度优化**：适配 AndroidX/Jetifier 兼容环境，优化 Gradle JVM 内存上限。
+**Bug Fixes**
+- Fixed a crash caused by Config#HARDWARE bitmap being unable to call getPixel
+- Fixed settings page switches jumping and flickering when switching pages
+- Fixed a compilation error caused by leftover SettingsDialog code
+- Fixed the gray background color issue caused by the window background color
+- Unified all components to use M3 color tokens
 
 ---
 
-## 多电脑编译签名说明
+## Localization and Enhancement Features
 
-本项目使用统一的 `release.keystore` 签名文件，确保所有电脑编译的 APK 签名一致，覆盖安装时不报签名冲突。
+1. **Simplified Chinese localization**: 100% complete Simplified Chinese translation of all text (`zh-rCN`).
+2. **Language switching**: Supports one-tap switching among Chinese, English, and Français, without changing the phone's system language.
+3. **Built-in core voice driver**: All-architecture core binary libraries (jniLibs) are built in directly, ready to use out of the box.
+4. **CI/CD deep optimization**: Adapted for the AndroidX/Jetifier compatibility environment and optimized the Gradle JVM memory limit.
 
-- 签名文件位于项目根目录 `release.keystore`
-- 密码/别名：`ts6droid`
-- 该文件已被 `.gitignore` 排除，不会提交到 GitHub
-- 多电脑协作时，将 `release.keystore` 复制到其他电脑的项目根目录即可
+---
 
-### 生成新的签名文件
+## Multi-computer Build Signing Instructions
 
-如需替换签名（例如用于正式发布），在项目根目录执行：
+This project uses a unified `release.keystore` signing file to ensure that APKs built on all computers have the same signature and do not report signature conflicts when installed over previous versions.
+
+- The signing file is located in the project root directory: `release.keystore`
+- Password/alias: `ts6droid`
+- This file is excluded by `.gitignore` and will not be committed to GitHub
+- For multi-computer collaboration, copy `release.keystore` to the project root directory on the other computers
+
+### Generate a new signing file
+
+If you need to replace the signature (for example, for an official release), run the following in the project root directory:
 
 ```bash
 keytool -genkey -v -keystore release.keystore -alias ts6droid -keyalg RSA -keysize 2048 -validity 10000
@@ -190,30 +186,30 @@ keytool -genkey -v -keystore release.keystore -alias ts6droid -keyalg RSA -keysi
 
 ---
 
-## 如何进行云编译 (GitHub Actions)
+## How to Perform Cloud Builds (GitHub Actions)
 
-1. **Fork 本仓库** 到你自己的 GitHub 账号下。
-2. 进入仓库页面，点击顶部的 **Actions** 标签，点击绿色按钮激活 Actions。
-3. 每次代码推送或手动触发工作流，GitHub 自动打包。
-4. 编译完成后，在 **Assets** 区域下载 `app-debug.apk`。
+1. **Fork this repository** to your own GitHub account.
+2. Go to the repository page, click the **Actions** tab at the top, and click the green button to activate Actions.
+3. Every code push or manually triggered workflow will cause GitHub to build automatically.
+4. After the build is complete, download `app-debug.apk` in the **Assets** section.
 
 ---
 
-## 技术架构与配置
+## Technical Architecture and Configuration
 
-关于底层 Rust 架构、本地编译环境搭建等技术细节，请参考原作者仓库：
+For technical details such as the underlying Rust architecture and local build environment setup, please refer to the original author's repository:
 
 [flamme-demon/TS6_Droid](https://github.com/flamme-demon/TS6_Droid)
 
-## 开源许可
+## Open Source License
 
-本项目遵循 GNU GPLv3 开源许可证。详见 [LICENSE](LICENSE) 文件。
+This project is licensed under the GNU GPLv3 open source license. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 贡献者
+## Contributors
 
-感谢所有为本项目做出贡献的开发者！
+Thanks to all developers who have contributed to this project!
 
 <a href="https://github.com/YUAXI/TS6_Droid_CN/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=YUAXI/TS6_Droid_CN&v=20260729" />
