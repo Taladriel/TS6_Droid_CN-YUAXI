@@ -2,6 +2,7 @@
 <resources>
     <!-- App -->
     <string name="app_name">TS6 Droid</string>
+    <string name="language_Russian">Русский</string>
     <string name="language_simplified_chinese">简体中文</string>
     <string name="language_english">English</string>
     <string name="language_french">Français</string>
