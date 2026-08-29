@@ -57,6 +57,7 @@ fun SettingsPage(
     val audioGain by settingsStore.audioGain.collectAsStateWithLifecycle(initialValue = 1.0f)
 
     val languageOptions = listOf(
+        "ru" to stringResource(R.string.language_russian),
         "zh" to stringResource(R.string.language_simplified_chinese),
         "en" to stringResource(R.string.language_english),
         "fr" to stringResource(R.string.language_french),
