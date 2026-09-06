@@ -1,4 +1,4 @@
-TS6 Droid Simplified Chinese version
+TS6 Droid Multi-Language version
 
 This is a free, lightweight TeamSpeak 3/6 Android client, built with Jetpack Compose, driven at the underlying layer by a 'tslib' written in Rust.
 
