@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="channel_connection_desc">Server connection notification</string>
+    <!-- App -->
+    <string name="app_name">TS6 Droid</string>
     <string name="language_russian">Русский</string>
     <string name="language_simplified_chinese">简体中文</string>
     <string name="language_english">English</string>
     <string name="language_french">Français</string>
-    <string name="language_change_title">Apply language change?</string>
+    <string name="language_change_title">Language:</string>
     <string name="language_change_message">The app needs to restart to apply %1$s.</string>
-    <string name="restart">Restart</string>
+    <string name="restart">Restart/string>
     <string name="mute_user">Mute user</string>
     <string name="unmute_user">Unmute user</string>
     <string name="user_muted">Muted</string>
+    <string name="channel_connection">Connection</string>
+    <string name="channel_connection_desc">Server connection notification</string>
+    <string name="accessibility_service_desc">TeamSpeak 6 Global Voice Controller</string>
 
     <!-- ConnectionScreen -->
     <string name="server_address">Server address</string>
+    <string name="server_address_placeholder">localhost:9987</string>
     <string name="nickname">Nickname</string>
     <string name="password_optional">Password (optional)</string>
     <string name="channel_optional">Channel (optional)</string>
@@ -22,8 +27,14 @@
     <string name="connecting">Connecting\u2026</string>
     <string name="connect">Connect</string>
     <string name="add_bookmark">Add bookmark</string>
+    <string name="edit_bookmark">Edit bookmark</string>
+    <string name="save">Save</string>
     <string name="bookmarks">Bookmarks</string>
+    <string name="no_bookmarks">No bookmarks</string>
+    <string name="manual_connection">Manual connetion</string>
+    <string name="auto_reconnect">Auto reconnect</string>
     <string name="remove">Remove</string>
+    <string name="edit">Edit</string>
     <string name="select_channel">Select channel</string>
     <string name="cancel">Cancel</string>
 
@@ -33,16 +44,23 @@
     <string name="settings">Settings</string>
     <string name="audio_gain">Audio gain</string>
     <string name="audio_gain_value">×%1$.1f</string>
+    <string name="show_link_thumbnails">Show link thumbnails</string>
     <string name="auto_load_images">Auto-load images</string>
+    <string name="enable_floating_window">Enable floating window</string>
+    <string name="anime_background">Anime background</string>
+    <string name="noise_suppression">Noise suppression</string>
+    <string name="chat">Chat</string>
     <string name="push_to_talk">Push to talk</string>
+    <string name="ptt">PTT</string>
     <string name="mute_mic">Mute mic</string>
+    <string name="mute">Mute</string>
     <string name="unmute_mic">Unmute mic</string>
     <string name="tab_channel">Channel</string>
     <string name="tab_private">PM</string>
     <string name="tab_home">Home</string>
     <string name="tab_settings">Settings</string>
     <string name="no_connection">No connections</string>
-    <string name="wallpaper_cache_size">Wallpaper cache: %1$s MB (%2$d images)</string>
+    <string name="wallpaper_cache_size">>Wallpaper cache: %1$s MB (%2$d images)</string>
     <string name="wallpaper_max_cache">Max cache: %1$d MB</string>
     <string name="wallpaper_view_cache">View wallpaper cache</string>
     <string name="wallpaper_cache_images">images</string>
@@ -56,11 +74,11 @@
     <string name="custom_bg_delete_confirm">Delete custom background? Online wallpaper will be used instead.</string>
     <string name="custom_bg_active">Custom background is set</string>
     <string name="custom_bg_inactive">No custom background</string>
-    <string name="custom_bg_saved">Background saved</string>
+    <string name="custom_bg_saved">No custom background</string>
     <string name="custom_bg_load_error">Failed to load background</string>
     <string name="crop_title">Crop Background</string>
     <string name="crop_hint">Drag the white frame to select the area</string>
-    <string name="section_appearance">Appearance</string>
+    <string name="section_appearance">Apparence</string>
     <string name="section_audio">Audio</string>
     <string name="section_chat">Chat</string>
     <string name="section_more">More</string>
@@ -76,7 +94,8 @@
     <string name="filter_all">All</string>
     <string name="message_channel_placeholder">Channel message\u2026</string>
     <string name="message_private_placeholder">Message to %1$s\u2026</string>
-    <string name="send">Send</string>
+    <string name="send">Senf</string>
+    <string name="user_fallback">User #%1$d</string>
 
     <!-- UserItem -->
     <string name="status_recording">Recording</string>
@@ -86,18 +105,42 @@
     <string name="status_away">Away</string>
 
     <!-- MessageBubble -->
+    <string name="image">Image</string>
     <string name="file_attachment_info">%1$s \u00B7 Shared file</string>
+    <string name="file_attachment_server">%1$s \u00B7 Fichier du serveur</string>
+    <string name="download_not_supported">Download not supported</string>
     <string name="tap_to_download">Tap to download</string>
     <string name="tap_to_view">Tap to view</string>
     <string name="tap_to_open">Tap to open</string>
-    <string name="download_not_supported">Download not supported</string>
+    <string name="downloading">Downloading\u2026</string>
+    <string name="download">Download</string>
+    <string name="file_saved_label">Saved to Downloads</string>
+    <string name="file_saved">%1$s Download</string>
+    <string name="attach_file">Attach file</string>
     <string name="file_size_bytes">%1$d B</string>
     <string name="file_size_kb">%1$.1f KB</string>
     <string name="file_size_mb">%1$.1f MB</string>
     <string name="file_size_gb">%1$.1f GB</string>
 
+    <!-- File Manager -->
+    <string name="file_manager">Files</string>
+    <string name="no_files">No files</string>
+    <string name="new_folder">New folder</string>
+    <string name="rename">Rename</string>
+    <string name="delete_file">Delete file</string>
+    <string name="confirm_delete">Delete %1$s ?</string>
+    <string name="enter_folder_name">Enter folder name</string>
+    <string name="enter_new_name">New name</string>
+    <string name="refresh">Refresh</string>
+    <string name="create">Create</string>
+    <string name="folder">Folder</string>
+    <string name="upload">Upload</string>
+    <string name="share_in_channel">Share in channel</string>
+    <string name="share_file_title">Share %1$s</string>
+
     <!-- Notification -->
     <string name="notif_unmute">Unmute</string>
+    <string name="notif_mute">Mute</string>
 
     <!-- ViewModel -->
     <string name="unknown_sender">Unknown</string>
