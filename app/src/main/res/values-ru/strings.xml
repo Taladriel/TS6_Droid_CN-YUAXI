@@ -25,7 +25,7 @@
     <string name="default_channel">Канал по умолчанию</string>
     <string name="browse_channels">Выбрать канал</string>
     <string name="connecting">Подключение\u2026</string>
-    <string name="connect">Подключится</string>
+    <string name="connect">Подключиться</string>
     <string name="add_bookmark">Добавить избранное</string>
     <string name="edit_bookmark">Редактировать избранное</string>
     <string name="save">Сохранить избранное</string>
