@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Приложение -->
+    <string name="app_name">TS6 Droid RU</string>
+    <string name="channel_connection">Подключение</string>
+    <string name="channel_connection_desc">Уведомление о подключении к серверу</string>
+    <string name="accessibility_service_desc">TeamSpeak 6 Global Voice Controller</string>
+    <string name="language_russian">Русский</string>
+    <string name="language_simplified_chinese">简体中文</string>
+    <string name="language_english">English</string>
+    <string name="language_french">Français</string>
+    <string name="language_change_title">Выбор языка приложения:</string>
+    <string name="language_change_message">Для изменений требуется перезагрузка %1$s.</string>
+    <string name="restart">Перезагрузка</string>
+    <string name="mute_user">Заглушить юзера</string>
+    <string name="unmute_user">Включить звук юзеру</string>
+    <string name="user_muted">Заглушен</string>
+
+    <!-- Экран подключения -->
+    <string name="server_address">Арес сервера</string>
+    <string name="server_address_placeholder">localhost:9987</string>
+    <string name="nickname">Никнэйм</string>
+    <string name="password_optional">Пароль (опционально)</string>
+    <string name="channel_optional">Канал (опционально)</string>
+    <string name="default_channel">Канал по умолчанию</string>
+    <string name="browse_channels">Выбрать канал</string>
+    <string name="connecting">Подключение\u2026</string>
+    <string name="connect">Подключиться</string>
+    <string name="add_bookmark">Добавить избранное</string>
+    <string name="edit_bookmark">Редактировать избранное</string>
+    <string name="save">Сохранить избранное</string>
+    <string name="bookmarks">Избранное</string>
+    <string name="no_bookmarks">Нет избранного</string>
+    <string name="manual_connection">Ручное подключение</string>
+    <string name="auto_reconnect">Авто подключение</string>
+    <string name="remove">Удалить</string>
+    <string name="edit">Редактировать</string>
+    <string name="select_channel">Выбрать канал</string>
+    <string name="cancel">Отмена</string>
+
+    <!-- Экран сервера -->
+    <string name="server">Сервер</string>
+    <string name="disconnect">Отключится</string>
+    <string name="settings">Настройки</string>
+    <string name="audio_gain">Усиление звука</string>
+    <string name="audio_gain_value">×%1$.1f</string>
+    <string name="mic_gain">Усиление микрофона</string>
+    <string name="gain_percent">%1$d%%</string>
+    <string name="show_link_thumbnails">Показать миниатюры ссылок</string>
+    <string name="auto_load_images">Автозагрузка изображений</string>
+    <string name="enable_floating_window">Включить плавающее окно</string>
+    <string name="error_overlay_permission_required">Пожалуйста предоставьте разрешение &quot;Поверх остальных приложение&quot; что-бы использовать плавающее окно.</string>
+    <string name="chat">Чат</string>
+    <string name="push_to_talk">Режим рации</string>
+    <string name="ptt">PTT</string>
+    <string name="mute_mic">Отключить микрофон</string>
+    <string name="mute">Заглушить</string>
+    <string name="unmute_mic">Включить микрофон</string>
+    <string name="tab_channel">Канал</string>
+    <string name="tab_private">ПМ</string>
+    <string name="tab_home">В начало</string>
+    <string name="tab_settings">Параметры</string>
+    <string name="no_connection">Нет подключений</string>
+    <string name="wallpaper_cache_size">Кэш обоев: %1$s MB (%2$d изображений)</string>
+    <string name="wallpaper_max_cache">Максимальный кэш: %1$d MB</string>
+    <string name="wallpaper_view_cache">Просмотреть кэш обоев</string>
+    <string name="wallpaper_cache_images">Изображения</string>
+    <string name="wallpaper_clear_cache">Очистить кэшобоев</string>
+    <string name="wallpaper_clear_cache_confirm">Вы уверены, что хотите очистить весь кэш обоев? Это действие необратимо.</string>
+    <string name="wallpaper_cache_empty">Нет кэшированных обоев</string>
+    <string name="wallpaper_export">Сохранить в галерею</string>
+    <string name="wallpaper_export_all">Сохранить все</string>
+    <string name="wallpaper_export_done">Сохранено %1$d изображение(ий) в галерею</string>
+    <string name="wallpaper_export_failed">Не удалось сохранить в галерею</string>
+    <string name="session_running">Сеанс запущен</string>
+    <string name="session_running_desc">Сеанс продолжает работать в фоне</string>
+    <string name="back_to_session">Вернуться в сеанс</string>
+    <string name="back_to_home">Назад в начало</string>
+    <string name="floating_overlay_offline">Не подключено</string>
+    <string name="floating_overlay_no_channel">Не в канале</string>
+    <string name="floating_overlay_members">%1$d Здесь</string>
+    <string name="floating_overlay_channels">Кагалы</string>
+    <string name="floating_overlay_alone">Вы один в этом канале</string>
+    <string name="floating_overlay_no_channels">Нет каналов что-бы переключиться</string>
+    <string name="floating_overlay_open_app">Открыть прилодение</string>
+    <string name="floating_overlay_collapse">Свернуть</string>
+    <string name="floating_overlay_push_to_talk">Нажмите что-бы говорить</string>
+    <string name="floating_overlay_muted">Заглушен</string>
+    <string name="floating_overlay_talking">Микрофон вкл.: говорите</string>
+    <string name="floating_overlay_mic_not_working">Микрофон не работает</string>
+    <string name="floating_overlay_deafened">Звук выключен</string>
+    <string name="overlay_permission_needed">Плавающнму окну, нужно разрешение "Поверх остальных приложений"</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="custom_bg_title">Полльзовательский фон</string>
+    <string name="custom_bg_upload">Выберите из галереи</string>
+    <string name="custom_bg_delete">Удалить пользовательский фон</string>
+    <string name="custom_bg_delete_confirm">Удалить пользовательский фон? Вместо этого будет использован онлайн фон.</string>
+    <string name="custom_bg_active">Пользовательский фон установлен</string>
+    <string name="custom_bg_inactive">Нет пользовательского фона</string>
+    <string name="custom_bg_saved">Фон сохранён</string>
+    <string name="custom_bg_load_error">Сбой загрузки фона</string>
+    <string name="crop_title">Обрезать фон</string>
+    <string name="crop_hint">Поместите белую рамку, что-бы выбрать область</string>
+    <string name="section_appearance">Внешний вид</string>
+    <string name="section_audio">Аудио</string>
+
+    <!-- Экспорт/импорт идентификации -->
+    <string name="identity_section">Идентификация</string>
+    <string name="identity_uid">UID Идентификатор: %1$s</string>
+    <string name="identity_uid_none">Ещё не создан (генерируется при первом подключении)</string>
+    <string name="identity_export">Экспорт</string>
+    <string name="identity_import">Импорт</string>
+    <string name="identity_export_success">Идентификатор экспортирован</string>
+    <string name="identity_export_failed">Ошибка экспорта: идентификатора ещё нет</string>
+    <string name="identity_import_success">Импортировано; Применится при следующем подключении</string>
+    <string name="identity_import_failed">Ошибка импорта: неверный формат файла идентификатора</string>
+    <string name="identity_warning">Ваша идентификация — это учётные данные вашей учётной записи: импорт переключает вашу идентификацию на сервере, а экспортированный файл следует хранить в безопасности.</string>
+    <string name="mic_mode">Режим микрофона</string>
+    <string name="mic_mode_vad">Активация голосом</string>
+    <string name="mic_mode_open">Открытый микрофон</string>
+    <string name="vad_threshold">Порог срабатывания: %1$d dB</string>
+    <string name="vad_threshold_hint">Аудио передаётся выше порога. −45 dB подходит для большинства окружений.</string>
+    <string name="user_uid">Уникальный  ID</string>
+    <string name="user_platform">Платформа</string>
+    <string name="user_version">Версия</string>
+    <string name="user_country">Страна</string>
+    <string name="user_talkpower">Уровень разрешения говорить</string>
+    <string name="user_volume">Громкость:</string>
+    <string name="volume_default">По умолчанию</string>
+    <string name="volume_reset">Сбросить громкость</string>
+    <string name="private_message">Личные сообщения</string>
+    <string name="section_chat">Чат</string>
+    <string name="section_more">Больше</string>
+    <string name="update_check">Проверить обновления</string>
+    <string name="update_found">Доступна новая версия</string>
+    <string name="update_already_latest">Версия уже актуальная</string>
+    <string name="update_available">Новая версия %1$s доступна</string>
+    <string name="update_download">Обновить сейчас</string>
+    <string name="update_downloading">Загрузка обновления</string>
+    <string name="update_later">Обновить позже</string>
+    <string name="update_no_changelog">Список изменений отсутствует</string>
+    <string name="close">Закрыть</string>
+    <string name="filter_all">Все</string>
+    <string name="message_channel_placeholder">Сообщение канала\u2026</string>
+    <string name="message_private_placeholder">Сообщение для %1$s\u2026</string>
+    <string name="send">Отправить</string>
+    <string name="user_fallback">Пользователь #%1$d</string>
+
+    <!-- Элементы пользователя -->
+    <string name="status_recording">Запись</string>
+    <string name="status_talking">Говорит</string>
+    <string name="status_muted">Заглушен</string>
+    <string name="status_output_muted">Звук выключен</string>
+    <string name="status_away">Отошел</string>
+
+    <!-- Всплывающие сообщения -->
+    <string name="image">Изображение</string>
+    <string name="file_attachment_info">%1$s \u00B7 Общий файл</string>
+    <string name="file_attachment_server">%1$s \u00B7 Файл сервера</string>
+    <string name="tap_to_download">Нажмите, чтобы скачать</string>
+    <string name="tap_to_view">Нажмите, чтобы отобразить</string>
+    <string name="tap_to_load_images">Нажмите чтобы загрузить изображения</string>
+    <string name="retry">Повторить</string>
+    <string name="file_too_large">Размер файла превышает ограничение 10 MB  — загрузка отменена</string>
+    <string name="tap_to_open">Нажмите, чтобы открыть</string>
+    <string name="download_not_supported">Загрузка не поддерживается</string>
+    <string name="downloading">Загрузка\u2026</string>
+    <string name="download">Загрузить</string>
+    <string name="file_saved_label">Сохранено в Загрузки</string>
+    <string name="file_saved">%1$s сохранён</string>
+    <string name="attach_file">Прикрепить фаил</string>
+    <string name="file_size_bytes">%1$d B</string>
+    <string name="file_size_kb">%1$.1f KB</string>
+    <string name="file_size_mb">%1$.1f MB</string>
+    <string name="file_size_gb">%1$.1f GB</string>
+
+    <!-- Файловый менеджер -->
+    <string name="file_manager">Проводник</string>
+    <string name="no_files">Нет файлов</string>
+    <string name="new_folder">Новая папка</string>
+    <string name="rename">Переименовать</string>
+    <string name="delete_file">Удалить</string>
+    <string name="confirm_delete">Удалить %1$s ?</string>
+    <string name="enter_folder_name">Название папки</string>
+    <string name="enter_new_name">Новое название</string>
+    <string name="refresh">Обновить</string>
+    <string name="create">Создать</string>
+    <string name="folder">Папка</string>
+    <string name="upload">Загрузить</string>
+    <string name="share_in_channel">поделиться в канале</string>
+    <string name="share_file_title">Поделиться %1$s</string>
+
+    <!-- Уведомления -->
+    <string name="notif_unmute">Микрофон включен</string>
+    <string name="notif_mute">Микрофон заглушен</string>
+
+    <!-- модель представления -->
+    <string name="unknown_sender">Неизвестный</string>
+    <string name="me_sender">Мой</string>
+    <string name="error_address_nickname_required">Адрес и ник обязательны.</string>
+    <string name="error_nickname_too_short">Никнейм должен быть не менее 3 символа</string>
+    <string name="connection_failed">Ошибка подключения</string>
+    <string name="browse_failed">Не удалось просмотреть каналы</string>
+    <string name="error_service_start_failed">Ошибка запуска фоновой службы</string>
+    <string name="error_not_connected">Не подключен к серверу</string>
+    <string name="download_failed">Ошибка загрузки</string>
+
+
+    <!-- Оверлей отчёта о краше -->
+    <string name="crash_report_title">Обнаружен предыдущий аварийный выход</string>
+    <string name="common_copy">Копировать</string>
+    <string name="common_copied">Скопировано</string>
+
+    <!-- Экран "О приложении" -->
+    <string name="about_software">О приложении / About</string>
+    <string name="about_back">← Назад</string>
+    <string name="about_credits_title">Авторы &amp; источники</string>
+    <string name="about_credits_desc">Этот проект основан на превосходном открытом проекте Grégory D, с глубокой локализацией и расширенными функциями. Искренняя благодарность оригинальному автору за его выдающийся вклад в открытое голосовое сообщество!</string>
+    <string name="about_enhancement_title">Локализация &amp; Заявление о дополнениях</string>
+    <string name="about_enhancement_desc">Эта версия включает глубокую локализацию полного текста от Taladriel. Yuaxi(автор форка) Проделал комплексный рефакторинг кода совместимости с системой для исправления множества глубинных проблем с фоновыми сбоями. Кроме того, ориентируясь на сценарий постоянно включённой тактической голосовой связи на мобильных устройствах, в рамках эксклюзивной вторичной разработки добавлены ключевые функции, такие как [Минималистичная полупрозрачная постоянно включённая плавающая консоль], что значительно оптимизирует взаимодействие с микрофоном/отключением звука во время киберспорта и игр.</string>
+    <string name="about_license_title">Лицензия с открытым исходным кодом (GPLv3)</string>
+    <string name="about_license_desc">Этот проект строго следует открытой лицензии GNU GPLv3 (GNU General Public License v3). Это означает, что любое лицо или команда, изменяющие этот проект или создающие на его основе производные распространяемые версии, ОБЯЗАНЫ сохранять его полностью открытым, безусловно принимать лицензию GPLv3 и в полной мере сохранять указание авторских прав оригинального автора (Grégory D) и разработчика вторичной локализации (yuaxi). Любая форма закрытой упаковки, вторичного шифрования или тайного извлечения прибыли строго запрещена!</string>
+    <string name="about_repo_title">Официальный репозиторий исходного кода &amp; Обновления</string>
+    <string name="about_repo_desc">Полный исходный код этого проекта, последующие официальные итерации функций, оптимизации опыта и экстренные патчи исправления ошибок будут публиковаться в первую очередь отдельно в моём официальном репозитории на GitHub. Приглашаю ставить Star, следить, сообщать об Issues или отправлять PR:</string>
+    <string name="about_repo_link">🔗 Нажмите, чтобы перейти в репозиторий Yuaxi с открытым исходным кодом на GitHub</string>
+    <string name="about_warning_title">⚠️ Защита от мошенничества (Серьезное предупреждение)</string>
+    <string name="about_warning_desc">Эта программа — чисто общественно-полезный, некоммерческий продукт для открытого технического обмена. Она полностью БЕСПЛАТНА и полностью ОТКРЫТА! Любая форма коммерческой перепродажи, выкупа упаковки или продажи в комплекте с ключ-кодами строго запрещена. Если вы получили это программное обеспечение через платные каналы (например, перекупы-боты, торговые площадки, платные сервисы загрузки и т.п.), вас обманули! Немедленно инициируйте на платформе требование о возврате средств за нарушение прав и отправляйтесь в официальный открытый репозиторий, чтобы сообщить о чёрных перекупщиках под своим настоящим именем!</string>
+    <string name="anime_background">Аниме фон</string>
+    <string name="noise_suppression">Подавление шума</string>
+    <string name="about_contributors_title">Участники проекта</string>
+    <string name="about_contributions_count">%1$d Вклад в проект</string>
+    <string name="contributors_load_error">Ошибка загрузки</string>
+
+    <!-- Надёжность в фоне -->
+    <string name="reconnect_in_progress">Переподключение… (attempt %1$d)</string>
+    <string name="reconnect_notification">Отключен — переподключение (попытка %1$d)</string>
+    <string name="mic_unavailable_warning">Микрофон в данный момент недоступен; выполняется попытка автоматического восстановления. Если ситуация не изменится, проверьте, разрешает ли система этому приложению запись в фоне.</string>
+    <string name="mic_unavailable_short">Микрофон не доступен</string>
+    <string name="battery_optimization">Исключение из оптимизации батареи</string>
+    <string name="battery_optimization_desc">Исключение приложения позволяет сохранять запись и сетевую работу в фоне (важно в режимах энергосбережения)</string>
+    <string name="battery_optimization_allowed">Исключить</string>
+    <string name="battery_optimization_action">Установлено</string>
+    <string name="app_details_settings">Разрешение приложения &amp; автозапуск</string>
+    <string name="app_details_settings_desc">На прошивках Xiaomi/Huawei/OPPO/vivo разрешите здесь автозапуск, неограниченную работу в фоне и фоновые всплывающие окна</string>
+
+    <!-- Просмотр логов внутри приложения -->
+    <string name="diag_log_title">Журнал диагностики</string>
+    <string name="diag_log_hint">Показывает только журнал этого процесса (adb не нужен). Нажмите «Обновить», чтобы перезагрузить.</string>
+    <string name="diag_log_refresh">Обновить</string>
+    <string name="diag_log_clear">Очистить</string>
+    <string name="diag_log_empty">Нет записей в журнале</string>
+    <string name="diag_log_loading">Загрузка\u2026</string>
+    <string name="back">Назал</string>
+
+    <!-- Карточка информации о сервере -->
+    <string name="server_info">Информация о сервере</string>
+    <string name="server_platform_version">Платформа / Версия</string>
+    <string name="server_clients">Клиентов онлайн</string>
+    <string name="server_clients_format">%1$d / %2$d</string>
+    <string name="server_channels">Каналы</string>
+    <string name="server_uptime">Время работы</string>
+    <string name="server_welcome">Приветственное сообщение</string>
+</resources>
