@@ -46,7 +46,7 @@ class SettingsStore(private val context: Context) {
         .map { it[KEY_AUTO_LOAD_IMAGES] ?: false }
 
     val language: Flow<String> = context.settingsDataStore.data
-        .map { it[KEY_LANGUAGE] ?: "zh" }
+        .map { it[KEY_LANGUAGE] ?: "ru" }
 
     val enableFloatingWindow: Flow<Boolean> = context.settingsDataStore.data
         .map { it[KEY_ENABLE_FLOATING_WINDOW] ?: true }
