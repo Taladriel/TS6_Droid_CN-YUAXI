@@ -1,5 +1,3 @@
-Вот перевод с сохранением разметки:
-
 # TS6 Droid RU (Русская версия)
 
 Android-клиент на основе открытого проекта автора [flamme-demon/TS6_Droid](https://github.com/flamme-demon/TS6_Droid), с Hecbabrfwbtq и расширенным функционалом.
