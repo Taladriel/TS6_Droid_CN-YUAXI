@@ -73,7 +73,7 @@ jobs:
           # 去掉 tag 的 v 前缀与 -Han 后缀，得到 TS6_Droid_Han-<版本>.apk
           VERSION="${GITHUB_REF_NAME#v}"
           VERSION="${VERSION%-Han}"
-          NAME="TS6_Droid_Han-${VERSION}.apk"
+          NAME="TS6_Droid_RU_APP-${VERSION}.apk"
           cp app/build/outputs/apk/release/app-release.apk "$NAME"
           sha256sum "$NAME" > "$NAME.sha256"
           echo "ASSET=$NAME" >> "$GITHUB_ENV"
@@ -95,19 +95,19 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: TS6 Droid Han v${{ env.VERSION }}
+          name: TS6 Droid Ru v${{ env.VERSION }}
           files: |
             ${{ env.ASSET }}
             ${{ env.ASSET }}.sha256
           # body_path 为空时 action 会退回 body
           body_path: ${{ steps.notes.outputs.path }}
           body: |
-            TS6 Droid 简中版 ${{ github.ref_name }}
+            TS6 Droid Русская версия ${{ github.ref_name }}
 
-            - 正式签名安装包：`${{ env.ASSET }}`（可直接覆盖更新）
-            - SHA-256 校验值见同名 `.sha256` 文件
-            - 本次更新要点见 [README 更新日志](https://github.com/${{ github.repository }}/blob/main/README.md#更新日志)
-            - 本 tag 对应完整源码（GPLv3）
+            - Официально подписанный установочный пакет: ${{ env.ASSET }} (можно устанавливать поверх предыдущей версии)
+            - Контрольная сумма SHA-256 находится в одноимённом файле .sha256
+            - Ключевые изменения этой версии см. в [списке изменений README](https://github.com/${{ github.repository }}/blob/main/README.md#Список изменений)
+            - Данный tag соответствует полному исходному коду (GPLv3)）
           generate_release_notes: true
           fail_on_unmatched_files: true
 
