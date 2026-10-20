@@ -6,9 +6,9 @@
     <string name="channel_connection_desc">Уведомление о подключении к серверу</string>
     <string name="accessibility_service_desc">TeamSpeak 6 Global Voice Controller</string>
     <string name="language_russian">Русский</string>
-    <string name="language_simplified_chinese">简体中文</string>
     <string name="language_english">English</string>
     <string name="language_french">Français</string>
+    <string name="language_simplified_chinese">简体中文</string>
     <string name="language_change_title">Выбор языка приложения:</string>
     <string name="language_change_message">Для изменений требуется перезагрузка %1$s.</string>
     <string name="restart">Перезагрузка</string>
@@ -23,11 +23,15 @@
     <string name="password_optional">Пароль (опционально)</string>
     <string name="channel_optional">Канал (опционально)</string>
     <string name="default_channel">Канал по умолчанию</string>
+    <string name="channel_password_title">Пароль канала: %1$s</string>
+    <string name="channel_password_label">Пароль</string>
+    <string name="channel_join">Присоедениться</string>
+    <string name="channel_password_required">Для этого канала нужен пароль</string>
     <string name="browse_channels">Выбрать канал</string>
     <string name="connecting">Подключение\u2026</string>
     <string name="connect">Подключиться</string>
     <string name="add_bookmark">Добавить избранное</string>
-    <string name="edit_bookmark">Редактировать избранное</string>
+    <string name="edit_bookmark">Изменить избранное</string>
     <string name="save">В избранное</string>
     <string name="bookmarks">Избранное</string>
     <string name="no_bookmarks">Нет избранного</string>
@@ -75,7 +79,7 @@
     <string name="session_running">Сеанс запущен</string>
     <string name="session_running_desc">Сеанс продолжает работать в фоне</string>
     <string name="back_to_session">Вернуться в сеанс</string>
-    <string name="back_to_home">Назад на главную</string>
+    <string name="back_to_home">На главную</string>
     <string name="floating_overlay_offline">Не подключено</string>
     <string name="floating_overlay_no_channel">Не в канале</string>
     <string name="floating_overlay_members">%1$d Здесь</string>
@@ -125,6 +129,14 @@
     <string name="user_version">Версия</string>
     <string name="user_country">Страна</string>
     <string name="user_talkpower">Talk Power</string>
+    <string name="user_server_groups">Группы сервера</string>
+    <string name="user_channel_group">Группа канала</string>
+    <string name="user_channel_group_unknown">Группа канала #%1$d</string>
+    <string name="user_server_group_unknown">Группа #%1$d</string>
+    <string name="user_server_groups_none">Нет информации о группе</string>
+    <string name="user_panel_self">Вы</string>
+    <string name="self_change_nickname">Изменить временный никнейм</string>
+    <string name="nickname_temporary_hint">Действует до отключения; при переподключении восстанавливается никнейм, с которым вы подключались</string>
     <string name="user_volume">Громкость:</string>
     <string name="volume_default">По умолчанию</string>
     <string name="volume_reset">Сбросить громкость</string>
@@ -177,15 +189,15 @@
     <!-- Файловый менеджер -->
     <string name="file_manager">Проводник</string>
     <string name="no_files">Нет файлов</string>
-    <string name="new_folder">Новая папка</string>
+    <string name="new_folder">Новый каталог</string>
     <string name="rename">Переименовать</string>
     <string name="delete_file">Удалить</string>
     <string name="confirm_delete">Удалить %1$s ?</string>
-    <string name="enter_folder_name">Название папки</string>
+    <string name="enter_folder_name">Название каталога</string>
     <string name="enter_new_name">Новое название</string>
     <string name="refresh">Обновить</string>
     <string name="create">Создать</string>
-    <string name="folder">Папка</string>
+    <string name="folder">Каталог</string>
     <string name="upload">Загрузить</string>
     <string name="share_in_channel">поделиться в канале</string>
     <string name="share_file_title">Поделиться %1$s</string>
@@ -232,7 +244,7 @@
     <string name="contributors_load_error">Ошибка загрузки</string>
 
     <!-- Надёжность в фоне -->
-    <string name="reconnect_in_progress">Переподключение… (attempt %1$d)</string>
+    <string name="reconnect_in_progress">Переподключение… (попытка %1$d)</string>
     <string name="reconnect_notification">Отключен — переподключение (попытка %1$d)</string>
     <string name="mic_unavailable_warning">Микрофон в данный момент недоступен; выполняется попытка автоматического восстановления. Если ситуация не изменится, проверьте, разрешает ли система этому приложению запись в фоне.</string>
     <string name="mic_unavailable_short">Микрофон не доступен</string>
@@ -260,4 +272,31 @@
     <string name="server_channels">Каналы</string>
     <string name="server_uptime">Время работы</string>
     <string name="server_welcome">Приветственное сообщение</string>
+
+    <!-- Шёпот (голосовой шёпот + текстовое личное сообщение) -->
+    <string name="whisper_clear_list">Очистить список</string>
+    <string name="whisper_hold_mic">Удерживайте для шёпота</string>
+    <string name="whisper_need_targets">Список шёпота пуст — добавьте цели перед тем, как удерживать кнопку для разговора</string>
+    <string name="whisper_banner">Список шёпота: %1$s</string>
+    <string name="whisper_placeholder">Шёпот для %1$s\u2026</string>
+    <string name="whisper_add_target">Добавить в список шёпота</string>
+    <string name="whisper_switch_label">Шёпот (голос только этому пользователю)</string>
+    <string name="whisper_remove_target">Убрать из списка шёпота</string>
+    <string name="whisper_channel_target">Канал является целью шёпота</string>
+    <string name="whisper_member_added">Шёпот для %1$s</string>
+    <string name="whisper_member_removed">Шёпот для %1$s прекращён</string>
+    <string name="whisper_channel_added">Шёпот в канал %1$s</string>
+    <string name="whisper_channel_removed">Шёпот в канал %1$s прекращён</string>
+    <string name="whisper_list_full">Список шёпота вмещает не более %1$d целей</string>
+    <string name="whisper_target_offline">(офлайн)</string>
+    <string name="whisper_talk_toast">%1$s шепчет вам</string>
+    <string name="whisper_list_title">Список шёпота</string>
+    <string name="whisper_list_hint">Когда этот список не пуст, удерживайте янтарную кнопку шёпота рядом с микрофоном, чтобы говорить только этим целям; введённые сообщения также отправляются им. Отпустите, чтобы вернуться в канал.</string>
+    <string name="whisper_section_groups">Серверные группы</string>
+    <string name="whisper_section_channels">Каналы</string>
+    <string name="whisper_section_members">Участники</string>
+    <string name="whisper_group_members">%1$d онлайн</string>
+    <string name="whisper_group_fallback">Группа #%1$d</string>
+    <string name="whisper_groups_unavailable">Сервер ещё не прислал список групп</string>
+    <string name="whisper_no_members">Индивидуально добавленных участников пока нет — используйте кнопку шёпота в строке участника</string>
 </resources>
