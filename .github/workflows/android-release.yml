@@ -73,7 +73,7 @@ jobs:
           # убираем префикс v у tag и суффикс -Han, получаем TS6_Droid_Ru-<версия>.apk
           VERSION="${GITHUB_REF_NAME#v}"
           VERSION="${VERSION%-Ru}"
-          NAME="TS6_Droid_Han-${VERSION}.apk"
+          NAME="TS6_Droid_Ru-${VERSION}.apk"
           cp app/build/outputs/apk/release/app-release.apk "$NAME"
           sha256sum "$NAME" > "$NAME.sha256"
           echo "ASSET=$NAME" >> "$GITHUB_ENV"
