@@ -102,7 +102,7 @@ jobs:
           # Если body_path пуст, action откатывается к body
           body_path: ${{ steps.notes.outputs.path }}
           body: |
-            TS6 Droid упрощённая китайская версия ${{ github.ref_name }}
+            TS6 Droid Русская версия ${{ github.ref_name }}
 
             - Официально подписанный установочный пакет: `${{ env.ASSET }}` (можно устанавливать поверх предыдущей версии)
             - Контрольная сумма SHA-256 находится в одноимённом файле `.sha256`
