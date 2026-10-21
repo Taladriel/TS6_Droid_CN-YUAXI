@@ -1,15 +1,15 @@
 name: Android Release (Signed APK → GitHub Release)
 
-# 推送 v*.*.*-Han 格式的 tag 自动构建正式签名包并发布 Release。
-# 应用内「检查更新」读取的就是这里发布的 latest 正式 Release：
-#   - Release 必须是正式发布（非 draft / 非 prerelease）
-#   - 资产里有且仅有一个 .apk（UpdateChecker 取第一个以 .apk 结尾的资产）
+# Пуш тега формата v*.*.*-Ru автоматически собирает официально подписанный пакет и публикует Release.
+# Именно latest официальный Release, опубликованный здесь, читает «Проверка обновлений» внутри приложения:
+#   - Release должен быть официальным (не draft / не prerelease)
+#   - среди активов должен быть ровно один .apk (UpdateChecker берёт первый актив с расширением .apk)
 on:
   push:
     tags:
-      - 'v*.*.*-Han'
-  # 允许手动重跑：在 Actions 页面选择某个 tag 作为 ref 触发即可，
-  # GITHUB_REF_NAME 仍然是 tag 名，产物与推送 tag 完全一致。
+      - 'v*.*.*-Ru'
+  # Разрешён ручной перезапуск: достаточно выбрать на странице Actions какой-либо tag в качестве ref для запуска,
+  # GITHUB_REF_NAME по-прежнему будет именем тега, а артефакты полностью совпадут с теми, что при пуше тега.
   workflow_dispatch:
 
 permissions:
@@ -30,8 +30,8 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      # 防止忘改版本号：tag 必须与 build.gradle.kts 里的 versionName 一致，
-      # 否则应用内检查更新会判错版本
+      # Защита от забытого изменения номера версии: tag должен совпадать с versionName в build.gradle.kts,
+      # иначе проверка обновлений внутри приложения определит версию неверно
       - name: Preflight — tag must match versionName
         run: |
           TAG_VERSION="${GITHUB_REF_NAME#v}"
@@ -69,10 +69,10 @@ jobs:
 
       - name: Rename APK and compute SHA-256
         run: |
-          # 资产名沿用本仓库既有约定（此前为 TS6_Droid_Han-2.1.5.apk）：
-          # 去掉 tag 的 v 前缀与 -Han 后缀，得到 TS6_Droid_Han-<版本>.apk
+          # Имя артефакта следует уже принятому в этом репозитории соглашению (ранее — TS6_Droid_Ru-2.1.5.apk):
+          # убираем префикс v у tag и суффикс -Han, получаем TS6_Droid_Ru-<версия>.apk
           VERSION="${GITHUB_REF_NAME#v}"
-          VERSION="${VERSION%-Han}"
+          VERSION="${VERSION%-Ru}"
           NAME="TS6_Droid_Han-${VERSION}.apk"
           cp app/build/outputs/apk/release/app-release.apk "$NAME"
           sha256sum "$NAME" > "$NAME.sha256"
@@ -82,8 +82,8 @@ jobs:
       - name: Pick release notes
         id: notes
         run: |
-          # 每个标签可以带一份手写发行说明：release-notes/<tag>.md
-          # 没有就用下面的通用正文，发版不会因为缺文件失败。
+          # Каждый тег может сопровождаться вручную написанным описанием выпуска: release-notes/<tag>.md
+          # Если его нет, используется приведённый ниже общий текст — выпуск не упадёт из-за отсутствия файла.
           NOTES="release-notes/${GITHUB_REF_NAME}.md"
           if [ -f "$NOTES" ]; then
             echo "path=$NOTES" >> "$GITHUB_OUTPUT"
@@ -95,19 +95,19 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: TS6 Droid Han v${{ env.VERSION }}
+          name: TS6 Droid Ru v${{ env.VERSION }}
           files: |
             ${{ env.ASSET }}
             ${{ env.ASSET }}.sha256
-          # body_path 为空时 action 会退回 body
+          # Если body_path пуст, action откатывается к body
           body_path: ${{ steps.notes.outputs.path }}
           body: |
-            TS6 Droid 简中版 ${{ github.ref_name }}
+            TS6 Droid упрощённая китайская версия ${{ github.ref_name }}
 
-            - 正式签名安装包：`${{ env.ASSET }}`（可直接覆盖更新）
-            - SHA-256 校验值见同名 `.sha256` 文件
-            - 本次更新要点见 [README 更新日志](https://github.com/${{ github.repository }}/blob/main/README.md#更新日志)
-            - 本 tag 对应完整源码（GPLv3）
+            - Официально подписанный установочный пакет: `${{ env.ASSET }}` (можно устанавливать поверх предыдущей версии)
+            - Контрольная сумма SHA-256 находится в одноимённом файле `.sha256`
+            - Ключевые изменения этой версии см. в [списке изменений README](https://github.com/${{ github.repository }}/blob/main/README.md#更新日志)
+            - Данный tag соответствует полному исходному коду (GPLv3)
           generate_release_notes: true
           fail_on_unmatched_files: true
 
