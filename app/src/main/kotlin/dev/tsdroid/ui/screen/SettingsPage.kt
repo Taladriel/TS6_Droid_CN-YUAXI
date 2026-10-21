@@ -88,6 +88,7 @@ fun SettingsPage(
     val vadThreshold by settingsStore.vadThresholdDb.collectAsStateWithLifecycle(initialValue = VadGate.DEFAULT_THRESHOLD_DB)
 
     val languageOptions = listOf(
+        "ru" to stringResource(R.string.language_Russian),
         "zh" to stringResource(R.string.language_simplified_chinese),
         "en" to stringResource(R.string.language_english),
         "fr" to stringResource(R.string.language_french),
