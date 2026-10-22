@@ -16,8 +16,8 @@ enum class AwayStatus(
     val defaultMessage: String?,
 ) {
     ONLINE(away = false, defaultMessage = null),
-    AWAY(away = true, defaultMessage = "离开"),
-    DND(away = true, defaultMessage = "请勿打扰"),
+    AWAY(away = true, defaultMessage = "Отошёл"),
+    DND(away = true, defaultMessage = "Не беспокоить"),
     ;
 
     /**
