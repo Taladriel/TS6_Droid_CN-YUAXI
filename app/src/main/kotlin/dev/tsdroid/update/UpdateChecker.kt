@@ -25,7 +25,7 @@ data class CheckResult(
 
 object UpdateChecker {
     private const val TAG = "UpdateChecker"
-    private const val REPO = "YUAXI/TS6_Droid_CN"
+    private const val REPO = "Taladriel/TS6_Droid_RU"
     private const val API_URL = "https://api.github.com/repos/$REPO/releases/latest"
 
     suspend fun checkForUpdate(currentVersionName: String): CheckResult = withContext(Dispatchers.IO) {
